@@ -42,7 +42,7 @@
                 <!-- duration + severity -->
                 <div class="slds-grid slds-gutters slds-wrap slds-m-vertical_small">
                     <div class="slds-col slds-size_1-of-2">
-                        <lightning-input type="number" min="0" label="How many days?"
+                        <lightning-input type="number" min="1" label="How many days?"
                             value={durationDays} onchange={handleDuration}></lightning-input>
                     </div>
                     <div class="slds-col slds-size_1-of-2">
@@ -131,7 +131,7 @@
                 <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center slds-m-bottom_small">
                     <span class={priorityClass}>{result.triageLevel}</span>
                     <span class="slds-text-body_regular">
-                        Route to: <strong>{result.recommendedSpecialty}</strong>
+                        Route to: <strong>{recommendedSpecialtyLabel}</strong>
                     </span>
                 </div>
 

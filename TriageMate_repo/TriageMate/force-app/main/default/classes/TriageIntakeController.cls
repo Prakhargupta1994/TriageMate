@@ -80,10 +80,17 @@ public with sharing class TriageIntakeController {
     // always transports cleanly; an inner-class param does not.
     @AuraEnabled
     public static IntakeResult submitIntakeJson(String payload) {
-        System.debug('TRIAGE submitIntakeJson -> raw payload: ' + payload);
-        IntakeRequest req = (IntakeRequest) JSON.deserialize(payload, IntakeRequest.class);
-        System.debug('TRIAGE submitIntakeJson -> parsed symptoms: ' + String.valueOf(req.symptomExternalIds));
-        return submitIntake(req);
+        if (String.isBlank(payload)) {
+            throw new AuraHandledException('Please complete the intake form before submitting.');
+        }
+
+        try {
+            IntakeRequest req = (IntakeRequest) JSON.deserialize(payload, IntakeRequest.class);
+            System.debug('TRIAGE submitIntakeJson -> payload received');
+            return submitIntake(req);
+        } catch (System.JSONException e) {
+            throw new AuraHandledException('The intake request could not be read. Please try again.');
+        }
     }
 
     // ===================== Main intake logic ============================
@@ -95,7 +102,21 @@ public with sharing class TriageIntakeController {
         if (req == null || req.symptomExternalIds == null || req.symptomExternalIds.isEmpty()) {
             throw new AuraHandledException('Please select at least one symptom.');
         }
-        Set<String> symptomSet = new Set<String>(req.symptomExternalIds);
+
+        Set<String> symptomSet = new Set<String>();
+        for (String symptomExternalId : req.symptomExternalIds) {
+            if (String.isNotBlank(symptomExternalId)) {
+                symptomSet.add(symptomExternalId);
+            }
+        }
+        if (symptomSet.isEmpty()) {
+            throw new AuraHandledException('Please select at least one symptom.');
+        }
+
+        Map<String, Symptom__c> symByExt = symptomsByExt(symptomSet);
+        if (symByExt.size() != symptomSet.size()) {
+            throw new AuraHandledException('Please select a valid symptom.');
+        }
 
         List<ConditionResult> ranked = scoreConditions(symptomSet);
         System.debug('TRIAGE scoring -> ' + ranked.size() + ' conditions matched');
@@ -121,10 +142,11 @@ public with sharing class TriageIntakeController {
         System.debug('TRIAGE decision -> ' + triage + ' | ' + specialtyName + ' | redFlag ' + redFlag);
 
         Contact patient = resolvePatient(req);
+        String symptomLabel = buildSymptomLabel(symByExt);
 
         Case c = new Case(
             ContactId = patient.Id,
-            Subject = 'Triage intake: ' + buildSymptomLabel(symptomSet),
+            Subject = 'Triage intake: ' + symptomLabel,
             Status = 'New',
             Origin = 'Web',
             Triage_Level__c = triage,
@@ -136,7 +158,6 @@ public with sharing class TriageIntakeController {
         System.debug('TRIAGE created Case -> ' + c.Id);
 
         List<Case_Symptom__c> css = new List<Case_Symptom__c>();
-        Map<String, Symptom__c> symByExt = symptomsByExt(symptomSet);
         for (String ext : symptomSet) {
             Symptom__c s = symByExt.get(ext);
             if (s == null) continue;
@@ -280,10 +301,9 @@ public with sharing class TriageIntakeController {
         }
         return m;
     }
-    private static String buildSymptomLabel(Set<String> exts) {
-        Map<String, Symptom__c> m = symptomsByExt(exts);
+    private static String buildSymptomLabel(Map<String, Symptom__c> symptomsByExternalId) {
         List<String> names = new List<String>();
-        for (Symptom__c s : m.values()) names.add(s.Name);
+        for (Symptom__c s : symptomsByExternalId.values()) names.add(s.Name);
         String joined = String.join(names, ', ');
         return joined.length() > 200 ? joined.left(197) + '...' : joined;
     }

@@ -57,7 +57,10 @@ export default class TriageIntake extends LightningElement {
 
     handleFirst(e) { this.firstName = e.target.value; }
     handleLast(e) { this.lastName = e.target.value; }
-    handleDuration(e) { this.durationDays = parseInt(e.target.value, 10) || 0; }
+    handleDuration(e) {
+        const value = parseInt(e.target.value, 10);
+        this.durationDays = Number.isNaN(value) ? 1 : Math.max(value, 1);
+    }
     handleSeverity(e) { this.severity = e.detail.value; }
 
     handleSymptomToggle(e) {
@@ -109,21 +112,24 @@ export default class TriageIntake extends LightningElement {
         }
         this.result = undefined;
         this.loading = true;
+        const clean = (value) => (value || '').trim();
         const req = {
-            patientFirstName: this.firstName,
-            patientLastName: this.lastName,
+            patientFirstName: clean(this.firstName),
+            patientLastName: clean(this.lastName),
             durationDays: this.durationDays,
             severity: this.severity,
             symptomExternalIds: ids,
-            medications: this.meds.filter((m) => m.drugName).map((m) => ({ drugName: m.drugName, dosage: m.dosage, frequency: m.frequency })),
-            priorObservations: this.observations.map((o) => o.text).filter((t) => t)
+            medications: this.meds
+                .map((m) => ({ drugName: clean(m.drugName), dosage: clean(m.dosage), frequency: clean(m.frequency) }))
+                .filter((m) => m.drugName),
+            priorObservations: this.observations.map((o) => clean(o.text)).filter((t) => t)
         };
         const payload = JSON.stringify(req);
-        this.log('SUBMIT — payload string:', payload);
+        this.log('SUBMIT — payload prepared');
         try {
             // send as a STRING — this is the fix for the empty-symptoms bug
             this.result = await submitIntakeJson({ payload: payload });
-            this.log('SUBMIT — result received:', JSON.parse(JSON.stringify(this.result)));
+            this.log('SUBMIT — result received');
             if (this.result && this.result.aiContext) {
                 try {
                     const gpt = await generateAiSummary({ clinicalContext: this.result.aiContext });
@@ -138,7 +144,6 @@ export default class TriageIntake extends LightningElement {
         } catch (e) {
             this.errorMsg = (e && e.body && e.body.message) ? e.body.message : 'Something went wrong submitting the intake.';
             this.logErr('SUBMIT — ERROR:', this.errorMsg);
-            this.logErr('SUBMIT — full error:', JSON.stringify(e));
         } finally {
             this.loading = false;
             this.log('SUBMIT — finished. hasResult:', this.hasResult);
@@ -159,6 +164,9 @@ export default class TriageIntake extends LightningElement {
     }
 
     get hasResult() { return this.result != null; }
+    get recommendedSpecialtyLabel() {
+        return this.result && this.result.recommendedSpecialty ? this.result.recommendedSpecialty : 'Clinician review';
+    }
     get priorityClass() {
         const base = 'priority-badge ';
         if (!this.result) return base;

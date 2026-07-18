@@ -1,0 +1,2377 @@
+{
+  "specialties": [
+    {
+      "id": "SPEC_GP",
+      "name": "General Medicine / Family Physician"
+    },
+    {
+      "id": "SPEC_EM",
+      "name": "Emergency Medicine"
+    },
+    {
+      "id": "SPEC_PULM",
+      "name": "Pulmonology"
+    },
+    {
+      "id": "SPEC_CARD",
+      "name": "Cardiology"
+    },
+    {
+      "id": "SPEC_GASTRO",
+      "name": "Gastroenterology"
+    },
+    {
+      "id": "SPEC_NEURO",
+      "name": "Neurology"
+    },
+    {
+      "id": "SPEC_DERM",
+      "name": "Dermatology"
+    },
+    {
+      "id": "SPEC_OBGYN",
+      "name": "Obstetrics & Gynecology"
+    },
+    {
+      "id": "SPEC_URO",
+      "name": "Urology / Nephrology"
+    },
+    {
+      "id": "SPEC_ENT",
+      "name": "ENT (Otolaryngology)"
+    },
+    {
+      "id": "SPEC_ORTHO",
+      "name": "Orthopedics"
+    },
+    {
+      "id": "SPEC_RHEUM",
+      "name": "Rheumatology"
+    },
+    {
+      "id": "SPEC_ENDO",
+      "name": "Endocrinology"
+    },
+    {
+      "id": "SPEC_OPHTH",
+      "name": "Ophthalmology"
+    },
+    {
+      "id": "SPEC_PSYCH",
+      "name": "Psychiatry / Mental Health"
+    },
+    {
+      "id": "SPEC_ID",
+      "name": "Infectious Disease"
+    }
+  ],
+  "symptoms": [
+    {
+      "id": "SYM_FEVER",
+      "name": "Fever",
+      "bodySystem": "General"
+    },
+    {
+      "id": "SYM_HIGH_FEVER",
+      "name": "High fever (>39C / 102F)",
+      "bodySystem": "General"
+    },
+    {
+      "id": "SYM_CHILLS",
+      "name": "Chills / rigors",
+      "bodySystem": "General"
+    },
+    {
+      "id": "SYM_FATIGUE",
+      "name": "Fatigue / weakness",
+      "bodySystem": "General"
+    },
+    {
+      "id": "SYM_BODY_ACHES",
+      "name": "Body aches (myalgia)",
+      "bodySystem": "General"
+    },
+    {
+      "id": "SYM_NIGHT_SWEATS",
+      "name": "Night sweats",
+      "bodySystem": "General"
+    },
+    {
+      "id": "SYM_APPETITE_LOSS",
+      "name": "Loss of appetite",
+      "bodySystem": "General"
+    },
+    {
+      "id": "SYM_WEIGHT_LOSS",
+      "name": "Unintended weight loss",
+      "bodySystem": "General"
+    },
+    {
+      "id": "SYM_DEHYDRATION",
+      "name": "Signs of dehydration",
+      "bodySystem": "General"
+    },
+    {
+      "id": "SYM_DRY_COUGH",
+      "name": "Dry cough",
+      "bodySystem": "Respiratory / ENT"
+    },
+    {
+      "id": "SYM_PROD_COUGH",
+      "name": "Cough with phlegm",
+      "bodySystem": "Respiratory / ENT"
+    },
+    {
+      "id": "SYM_CHRONIC_COUGH",
+      "name": "Chronic cough (>3 weeks)",
+      "bodySystem": "Respiratory / ENT"
+    },
+    {
+      "id": "SYM_COUGH_BLOOD",
+      "name": "Coughing up blood",
+      "bodySystem": "Respiratory / ENT"
+    },
+    {
+      "id": "SYM_SORE_THROAT",
+      "name": "Sore throat",
+      "bodySystem": "Respiratory / ENT"
+    },
+    {
+      "id": "SYM_RUNNY_NOSE",
+      "name": "Runny nose",
+      "bodySystem": "Respiratory / ENT"
+    },
+    {
+      "id": "SYM_CONGESTION",
+      "name": "Nasal congestion",
+      "bodySystem": "Respiratory / ENT"
+    },
+    {
+      "id": "SYM_SNEEZING",
+      "name": "Sneezing",
+      "bodySystem": "Respiratory / ENT"
+    },
+    {
+      "id": "SYM_SOB",
+      "name": "Shortness of breath",
+      "bodySystem": "Respiratory / ENT"
+    },
+    {
+      "id": "SYM_WHEEZING",
+      "name": "Wheezing",
+      "bodySystem": "Respiratory / ENT"
+    },
+    {
+      "id": "SYM_CHEST_TIGHT",
+      "name": "Chest tightness",
+      "bodySystem": "Respiratory / ENT"
+    },
+    {
+      "id": "SYM_SMELL_LOSS",
+      "name": "Loss of smell / taste",
+      "bodySystem": "Respiratory / ENT"
+    },
+    {
+      "id": "SYM_EAR_PAIN",
+      "name": "Ear pain",
+      "bodySystem": "Respiratory / ENT"
+    },
+    {
+      "id": "SYM_SWOLLEN_TONSILS",
+      "name": "Swollen tonsils",
+      "bodySystem": "Respiratory / ENT"
+    },
+    {
+      "id": "SYM_FACIAL_PAIN",
+      "name": "Facial pain / pressure",
+      "bodySystem": "Respiratory / ENT"
+    },
+    {
+      "id": "SYM_CHEST_PAIN",
+      "name": "Chest pain",
+      "bodySystem": "Cardiovascular"
+    },
+    {
+      "id": "SYM_CHEST_PAIN_RAD",
+      "name": "Chest pain spreading to arm / jaw",
+      "bodySystem": "Cardiovascular"
+    },
+    {
+      "id": "SYM_PALPITATIONS",
+      "name": "Palpitations (racing heart)",
+      "bodySystem": "Cardiovascular"
+    },
+    {
+      "id": "SYM_LEG_SWELLING",
+      "name": "Swelling in both legs",
+      "bodySystem": "Cardiovascular"
+    },
+    {
+      "id": "SYM_CALF_PAIN",
+      "name": "Pain / swelling in one calf",
+      "bodySystem": "Cardiovascular"
+    },
+    {
+      "id": "SYM_SWEATING",
+      "name": "Cold sweats",
+      "bodySystem": "Cardiovascular"
+    },
+    {
+      "id": "SYM_NAUSEA",
+      "name": "Nausea",
+      "bodySystem": "Gastrointestinal"
+    },
+    {
+      "id": "SYM_VOMITING",
+      "name": "Vomiting",
+      "bodySystem": "Gastrointestinal"
+    },
+    {
+      "id": "SYM_VOMIT_BLOOD",
+      "name": "Vomiting blood",
+      "bodySystem": "Gastrointestinal"
+    },
+    {
+      "id": "SYM_DIARRHEA",
+      "name": "Diarrhea",
+      "bodySystem": "Gastrointestinal"
+    },
+    {
+      "id": "SYM_CONSTIPATION",
+      "name": "Constipation",
+      "bodySystem": "Gastrointestinal"
+    },
+    {
+      "id": "SYM_ABDO_PAIN",
+      "name": "Abdominal pain (general)",
+      "bodySystem": "Gastrointestinal"
+    },
+    {
+      "id": "SYM_RLQ_PAIN",
+      "name": "Pain in lower-right abdomen",
+      "bodySystem": "Gastrointestinal"
+    },
+    {
+      "id": "SYM_RUQ_PAIN",
+      "name": "Pain in upper-right abdomen",
+      "bodySystem": "Gastrointestinal"
+    },
+    {
+      "id": "SYM_HEARTBURN",
+      "name": "Heartburn / acid reflux",
+      "bodySystem": "Gastrointestinal"
+    },
+    {
+      "id": "SYM_BLOOD_STOOL",
+      "name": "Blood in stool / black stool",
+      "bodySystem": "Gastrointestinal"
+    },
+    {
+      "id": "SYM_JAUNDICE",
+      "name": "Yellow skin or eyes",
+      "bodySystem": "Gastrointestinal"
+    },
+    {
+      "id": "SYM_BLOATING",
+      "name": "Bloating",
+      "bodySystem": "Gastrointestinal"
+    },
+    {
+      "id": "SYM_HEADACHE",
+      "name": "Headache",
+      "bodySystem": "Neurological"
+    },
+    {
+      "id": "SYM_SEVERE_HEADACHE",
+      "name": "Sudden severe headache",
+      "bodySystem": "Neurological"
+    },
+    {
+      "id": "SYM_DIZZINESS",
+      "name": "Dizziness / light-headed",
+      "bodySystem": "Neurological"
+    },
+    {
+      "id": "SYM_VERTIGO",
+      "name": "Spinning sensation (vertigo)",
+      "bodySystem": "Neurological"
+    },
+    {
+      "id": "SYM_CONFUSION",
+      "name": "Confusion / altered awareness",
+      "bodySystem": "Neurological"
+    },
+    {
+      "id": "SYM_NUMBNESS",
+      "name": "Numbness / tingling",
+      "bodySystem": "Neurological"
+    },
+    {
+      "id": "SYM_FACE_DROOP",
+      "name": "Face drooping / one-sided weakness",
+      "bodySystem": "Neurological"
+    },
+    {
+      "id": "SYM_SLURRED_SPEECH",
+      "name": "Slurred speech",
+      "bodySystem": "Neurological"
+    },
+    {
+      "id": "SYM_FAINTING",
+      "name": "Fainting / loss of consciousness",
+      "bodySystem": "Neurological"
+    },
+    {
+      "id": "SYM_SEIZURE",
+      "name": "Seizure / convulsion",
+      "bodySystem": "Neurological"
+    },
+    {
+      "id": "SYM_NECK_STIFF",
+      "name": "Neck stiffness",
+      "bodySystem": "Neurological"
+    },
+    {
+      "id": "SYM_LIGHT_SENS",
+      "name": "Sensitivity to light",
+      "bodySystem": "Neurological"
+    },
+    {
+      "id": "SYM_BURNING_URINE",
+      "name": "Burning when urinating",
+      "bodySystem": "Genitourinary"
+    },
+    {
+      "id": "SYM_FREQ_URINE",
+      "name": "Frequent urination",
+      "bodySystem": "Genitourinary"
+    },
+    {
+      "id": "SYM_BLOOD_URINE",
+      "name": "Blood in urine",
+      "bodySystem": "Genitourinary"
+    },
+    {
+      "id": "SYM_FLANK_PAIN",
+      "name": "Flank / side pain",
+      "bodySystem": "Genitourinary"
+    },
+    {
+      "id": "SYM_THIRST",
+      "name": "Excessive thirst",
+      "bodySystem": "Genitourinary"
+    },
+    {
+      "id": "SYM_URINE_DIFF",
+      "name": "Difficulty urinating",
+      "bodySystem": "Genitourinary"
+    },
+    {
+      "id": "SYM_PELVIC_PAIN",
+      "name": "Pelvic / lower-abdominal pain",
+      "bodySystem": "Genitourinary"
+    },
+    {
+      "id": "SYM_JOINT_PAIN",
+      "name": "Joint pain",
+      "bodySystem": "Musculoskeletal / Skin"
+    },
+    {
+      "id": "SYM_JOINT_SWELL",
+      "name": "Joint swelling",
+      "bodySystem": "Musculoskeletal / Skin"
+    },
+    {
+      "id": "SYM_MORNING_STIFF",
+      "name": "Morning joint stiffness",
+      "bodySystem": "Musculoskeletal / Skin"
+    },
+    {
+      "id": "SYM_BACK_PAIN",
+      "name": "Back pain",
+      "bodySystem": "Musculoskeletal / Skin"
+    },
+    {
+      "id": "SYM_RASH",
+      "name": "Skin rash",
+      "bodySystem": "Musculoskeletal / Skin"
+    },
+    {
+      "id": "SYM_ITCHING",
+      "name": "Itching",
+      "bodySystem": "Musculoskeletal / Skin"
+    },
+    {
+      "id": "SYM_HIVES",
+      "name": "Hives (raised welts)",
+      "bodySystem": "Musculoskeletal / Skin"
+    },
+    {
+      "id": "SYM_SKIN_SWELL",
+      "name": "Swelling of face / lips / skin",
+      "bodySystem": "Musculoskeletal / Skin"
+    },
+    {
+      "id": "SYM_SKIN_RED_WARM",
+      "name": "Red, warm, tender skin patch",
+      "bodySystem": "Musculoskeletal / Skin"
+    },
+    {
+      "id": "SYM_RED_EYE",
+      "name": "Red / itchy eye",
+      "bodySystem": "Eyes"
+    },
+    {
+      "id": "SYM_EYE_DISCHARGE",
+      "name": "Eye discharge",
+      "bodySystem": "Eyes"
+    },
+    {
+      "id": "SYM_VISION_LOSS",
+      "name": "Sudden vision loss",
+      "bodySystem": "Eyes"
+    },
+    {
+      "id": "SYM_BLURRED_VISION",
+      "name": "Blurred vision",
+      "bodySystem": "Eyes"
+    },
+    {
+      "id": "SYM_MISSED_PERIOD",
+      "name": "Missed / late period",
+      "bodySystem": "Women's Health"
+    },
+    {
+      "id": "SYM_NAUSEA_MORNING",
+      "name": "Morning nausea",
+      "bodySystem": "Women's Health"
+    },
+    {
+      "id": "SYM_VAGINAL_BLEED",
+      "name": "Abnormal vaginal bleeding",
+      "bodySystem": "Women's Health"
+    },
+    {
+      "id": "SYM_MENSTRUAL_PAIN",
+      "name": "Painful periods",
+      "bodySystem": "Women's Health"
+    },
+    {
+      "id": "SYM_BREAST_TENDER",
+      "name": "Breast tenderness",
+      "bodySystem": "Women's Health"
+    },
+    {
+      "id": "SYM_LOW_MOOD",
+      "name": "Persistent low mood",
+      "bodySystem": "Mental Health"
+    },
+    {
+      "id": "SYM_ANXIETY",
+      "name": "Excessive worry / anxiety",
+      "bodySystem": "Mental Health"
+    },
+    {
+      "id": "SYM_SLEEP_PROB",
+      "name": "Sleep problems",
+      "bodySystem": "Mental Health"
+    },
+    {
+      "id": "SYM_SUICIDAL",
+      "name": "Thoughts of self-harm",
+      "bodySystem": "Mental Health"
+    }
+  ],
+  "conditions": [
+    {
+      "id": "CON_COLD",
+      "name": "Common cold (viral URI)",
+      "specialtyId": "SPEC_GP",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_FLU",
+      "name": "Influenza",
+      "specialtyId": "SPEC_GP",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_COVID",
+      "name": "COVID-19 / viral infection",
+      "specialtyId": "SPEC_GP",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": "Isolate per local protocol"
+    },
+    {
+      "id": "CON_RHINITIS",
+      "name": "Allergic rhinitis",
+      "specialtyId": "SPEC_GP",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_BRONCHITIS",
+      "name": "Acute bronchitis",
+      "specialtyId": "SPEC_PULM",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_PNEUMONIA",
+      "name": "Pneumonia",
+      "specialtyId": "SPEC_PULM",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_ASTHMA",
+      "name": "Asthma / bronchospasm",
+      "specialtyId": "SPEC_PULM",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": "Becomes Critical if unable to speak in full sentences"
+    },
+    {
+      "id": "CON_COPD",
+      "name": "COPD exacerbation",
+      "specialtyId": "SPEC_PULM",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_STREP",
+      "name": "Strep throat / tonsillitis",
+      "specialtyId": "SPEC_ENT",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": "Classic clue: sore throat WITHOUT cough"
+    },
+    {
+      "id": "CON_SINUSITIS",
+      "name": "Sinusitis",
+      "specialtyId": "SPEC_ENT",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_OTITIS",
+      "name": "Ear infection (otitis media)",
+      "specialtyId": "SPEC_ENT",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_PE",
+      "name": "Pulmonary embolism",
+      "specialtyId": "SPEC_EM",
+      "priority": "Critical",
+      "isRedFlag": true,
+      "note": "RED FLAG: escalate immediately"
+    },
+    {
+      "id": "CON_TB",
+      "name": "Tuberculosis",
+      "specialtyId": "SPEC_ID",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": "Notifiable; airborne precautions"
+    },
+    {
+      "id": "CON_DENGUE",
+      "name": "Dengue fever",
+      "specialtyId": "SPEC_ID",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": "Monitor platelets / warning signs"
+    },
+    {
+      "id": "CON_TYPHOID",
+      "name": "Typhoid fever",
+      "specialtyId": "SPEC_ID",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_MALARIA",
+      "name": "Malaria",
+      "specialtyId": "SPEC_ID",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_ACS",
+      "name": "Acute coronary syndrome / heart attack",
+      "specialtyId": "SPEC_EM",
+      "priority": "Critical",
+      "isRedFlag": true,
+      "note": "RED FLAG: escalate immediately"
+    },
+    {
+      "id": "CON_HTN",
+      "name": "Hypertension (high blood pressure)",
+      "specialtyId": "SPEC_CARD",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": "Often few symptoms; driven by BP reading"
+    },
+    {
+      "id": "CON_ARRHYTHMIA",
+      "name": "Arrhythmia / palpitations",
+      "specialtyId": "SPEC_CARD",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_HF",
+      "name": "Heart failure",
+      "specialtyId": "SPEC_CARD",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_DVT",
+      "name": "Deep vein thrombosis",
+      "specialtyId": "SPEC_EM",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": "Can progress to PE"
+    },
+    {
+      "id": "CON_GASTRO",
+      "name": "Gastroenteritis / food poisoning",
+      "specialtyId": "SPEC_GP",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": "Watch hydration"
+    },
+    {
+      "id": "CON_GERD",
+      "name": "Acid reflux (GERD)",
+      "specialtyId": "SPEC_GASTRO",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_ULCER",
+      "name": "Peptic ulcer",
+      "specialtyId": "SPEC_GASTRO",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_APPENDIX",
+      "name": "Appendicitis",
+      "specialtyId": "SPEC_EM",
+      "priority": "Critical",
+      "isRedFlag": true,
+      "note": "RED FLAG: surgical emergency"
+    },
+    {
+      "id": "CON_GALLSTONE",
+      "name": "Gallstones / cholecystitis",
+      "specialtyId": "SPEC_GASTRO",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_IBS",
+      "name": "Irritable bowel syndrome",
+      "specialtyId": "SPEC_GASTRO",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_HEPATITIS",
+      "name": "Hepatitis",
+      "specialtyId": "SPEC_GASTRO",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_GIBLEED",
+      "name": "Gastrointestinal bleed",
+      "specialtyId": "SPEC_EM",
+      "priority": "Critical",
+      "isRedFlag": true,
+      "note": "RED FLAG: escalate immediately"
+    },
+    {
+      "id": "CON_MIGRAINE",
+      "name": "Migraine",
+      "specialtyId": "SPEC_NEURO",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_TENSION_HA",
+      "name": "Tension headache",
+      "specialtyId": "SPEC_GP",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_MENINGITIS",
+      "name": "Meningitis",
+      "specialtyId": "SPEC_EM",
+      "priority": "Critical",
+      "isRedFlag": true,
+      "note": "RED FLAG: escalate immediately"
+    },
+    {
+      "id": "CON_STROKE",
+      "name": "Stroke",
+      "specialtyId": "SPEC_EM",
+      "priority": "Critical",
+      "isRedFlag": true,
+      "note": "RED FLAG: FAST signs, escalate immediately"
+    },
+    {
+      "id": "CON_VERTIGO",
+      "name": "Vertigo / BPPV",
+      "specialtyId": "SPEC_ENT",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_SEIZURE",
+      "name": "Seizure disorder",
+      "specialtyId": "SPEC_NEURO",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": "First-ever seizure -> Emergency"
+    },
+    {
+      "id": "CON_UTI",
+      "name": "Urinary tract infection",
+      "specialtyId": "SPEC_GP",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_KIDNEY_STONE",
+      "name": "Kidney stones",
+      "specialtyId": "SPEC_URO",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_PYELO",
+      "name": "Kidney infection (pyelonephritis)",
+      "specialtyId": "SPEC_URO",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_BPH",
+      "name": "Enlarged prostate (BPH)",
+      "specialtyId": "SPEC_URO",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_HYPERGLYCEMIA",
+      "name": "High blood sugar / new diabetes",
+      "specialtyId": "SPEC_ENDO",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_DKA",
+      "name": "Diabetic ketoacidosis",
+      "specialtyId": "SPEC_EM",
+      "priority": "Critical",
+      "isRedFlag": true,
+      "note": "RED FLAG: escalate immediately"
+    },
+    {
+      "id": "CON_HYPOGLYCEMIA",
+      "name": "Low blood sugar",
+      "specialtyId": "SPEC_EM",
+      "priority": "Critical",
+      "isRedFlag": true,
+      "note": "RED FLAG: treat immediately"
+    },
+    {
+      "id": "CON_THYROID",
+      "name": "Thyroid disorder",
+      "specialtyId": "SPEC_ENDO",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_DERMATITIS",
+      "name": "Contact dermatitis / skin allergy",
+      "specialtyId": "SPEC_DERM",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_URTICARIA",
+      "name": "Hives (urticaria)",
+      "specialtyId": "SPEC_DERM",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_CELLULITIS",
+      "name": "Cellulitis (skin infection)",
+      "specialtyId": "SPEC_DERM",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_ECZEMA",
+      "name": "Eczema",
+      "specialtyId": "SPEC_DERM",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_ANAPHYLAXIS",
+      "name": "Anaphylaxis (severe allergic reaction)",
+      "specialtyId": "SPEC_EM",
+      "priority": "Critical",
+      "isRedFlag": true,
+      "note": "RED FLAG: escalate immediately"
+    },
+    {
+      "id": "CON_OA",
+      "name": "Osteoarthritis",
+      "specialtyId": "SPEC_ORTHO",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_RA",
+      "name": "Rheumatoid arthritis",
+      "specialtyId": "SPEC_RHEUM",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_BACKPAIN",
+      "name": "Mechanical back pain",
+      "specialtyId": "SPEC_ORTHO",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_GOUT",
+      "name": "Gout",
+      "specialtyId": "SPEC_RHEUM",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_CONJUNCTIVITIS",
+      "name": "Conjunctivitis (eye infection)",
+      "specialtyId": "SPEC_OPHTH",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_VISION_LOSS",
+      "name": "Acute vision loss",
+      "specialtyId": "SPEC_OPHTH",
+      "priority": "Critical",
+      "isRedFlag": true,
+      "note": "RED FLAG: escalate immediately"
+    },
+    {
+      "id": "CON_PREGNANCY",
+      "name": "Possible pregnancy",
+      "specialtyId": "SPEC_OBGYN",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_ECTOPIC",
+      "name": "Ectopic pregnancy",
+      "specialtyId": "SPEC_OBGYN",
+      "priority": "Critical",
+      "isRedFlag": true,
+      "note": "RED FLAG: escalate immediately"
+    },
+    {
+      "id": "CON_DYSMENORRHEA",
+      "name": "Menstrual disorder / dysmenorrhea",
+      "specialtyId": "SPEC_OBGYN",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_AUB",
+      "name": "Abnormal uterine bleeding",
+      "specialtyId": "SPEC_OBGYN",
+      "priority": "Urgent",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_ANXIETY",
+      "name": "Anxiety disorder",
+      "specialtyId": "SPEC_PSYCH",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_DEPRESSION",
+      "name": "Depression",
+      "specialtyId": "SPEC_PSYCH",
+      "priority": "Routine",
+      "isRedFlag": false,
+      "note": ""
+    },
+    {
+      "id": "CON_CRISIS",
+      "name": "Mental-health crisis (self-harm risk)",
+      "specialtyId": "SPEC_PSYCH",
+      "priority": "Critical",
+      "isRedFlag": true,
+      "note": "RED FLAG: route to a human immediately; never close with automated messaging; surface crisis support"
+    }
+  ],
+  "symptomConditionMap": [
+    {
+      "symptomId": "SYM_RUNNY_NOSE",
+      "conditionId": "CON_COLD",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_CONGESTION",
+      "conditionId": "CON_COLD",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_SNEEZING",
+      "conditionId": "CON_COLD",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_SORE_THROAT",
+      "conditionId": "CON_COLD",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_DRY_COUGH",
+      "conditionId": "CON_COLD",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FEVER",
+      "conditionId": "CON_COLD",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_COLD",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_HIGH_FEVER",
+      "conditionId": "CON_FLU",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_BODY_ACHES",
+      "conditionId": "CON_FLU",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_DRY_COUGH",
+      "conditionId": "CON_FLU",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_FLU",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_CHILLS",
+      "conditionId": "CON_FLU",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_HEADACHE",
+      "conditionId": "CON_FLU",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_SORE_THROAT",
+      "conditionId": "CON_FLU",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FEVER",
+      "conditionId": "CON_COVID",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_DRY_COUGH",
+      "conditionId": "CON_COVID",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_SMELL_LOSS",
+      "conditionId": "CON_COVID",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_COVID",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_SOB",
+      "conditionId": "CON_COVID",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_SORE_THROAT",
+      "conditionId": "CON_COVID",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_BODY_ACHES",
+      "conditionId": "CON_COVID",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_SNEEZING",
+      "conditionId": "CON_RHINITIS",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_RUNNY_NOSE",
+      "conditionId": "CON_RHINITIS",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_CONGESTION",
+      "conditionId": "CON_RHINITIS",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_ITCHING",
+      "conditionId": "CON_RHINITIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_RED_EYE",
+      "conditionId": "CON_RHINITIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_PROD_COUGH",
+      "conditionId": "CON_BRONCHITIS",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_DRY_COUGH",
+      "conditionId": "CON_BRONCHITIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_CHEST_TIGHT",
+      "conditionId": "CON_BRONCHITIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_BRONCHITIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FEVER",
+      "conditionId": "CON_BRONCHITIS",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_WHEEZING",
+      "conditionId": "CON_BRONCHITIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_PROD_COUGH",
+      "conditionId": "CON_PNEUMONIA",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_FEVER",
+      "conditionId": "CON_PNEUMONIA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_CHEST_PAIN",
+      "conditionId": "CON_PNEUMONIA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_SOB",
+      "conditionId": "CON_PNEUMONIA",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_CHILLS",
+      "conditionId": "CON_PNEUMONIA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_PNEUMONIA",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_HIGH_FEVER",
+      "conditionId": "CON_PNEUMONIA",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_WHEEZING",
+      "conditionId": "CON_ASTHMA",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_SOB",
+      "conditionId": "CON_ASTHMA",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_CHEST_TIGHT",
+      "conditionId": "CON_ASTHMA",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_DRY_COUGH",
+      "conditionId": "CON_ASTHMA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_SOB",
+      "conditionId": "CON_COPD",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_PROD_COUGH",
+      "conditionId": "CON_COPD",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_WHEEZING",
+      "conditionId": "CON_COPD",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_CHEST_TIGHT",
+      "conditionId": "CON_COPD",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_CHRONIC_COUGH",
+      "conditionId": "CON_COPD",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_SORE_THROAT",
+      "conditionId": "CON_STREP",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_SWOLLEN_TONSILS",
+      "conditionId": "CON_STREP",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_FEVER",
+      "conditionId": "CON_STREP",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_HEADACHE",
+      "conditionId": "CON_STREP",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_FACIAL_PAIN",
+      "conditionId": "CON_SINUSITIS",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_CONGESTION",
+      "conditionId": "CON_SINUSITIS",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_RUNNY_NOSE",
+      "conditionId": "CON_SINUSITIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_HEADACHE",
+      "conditionId": "CON_SINUSITIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_EAR_PAIN",
+      "conditionId": "CON_SINUSITIS",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_EAR_PAIN",
+      "conditionId": "CON_OTITIS",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_FEVER",
+      "conditionId": "CON_OTITIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_HEADACHE",
+      "conditionId": "CON_OTITIS",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_SOB",
+      "conditionId": "CON_PE",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_CHEST_PAIN",
+      "conditionId": "CON_PE",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_CALF_PAIN",
+      "conditionId": "CON_PE",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_PALPITATIONS",
+      "conditionId": "CON_PE",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FAINTING",
+      "conditionId": "CON_PE",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_COUGH_BLOOD",
+      "conditionId": "CON_PE",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_CHRONIC_COUGH",
+      "conditionId": "CON_TB",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_WEIGHT_LOSS",
+      "conditionId": "CON_TB",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_NIGHT_SWEATS",
+      "conditionId": "CON_TB",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_COUGH_BLOOD",
+      "conditionId": "CON_TB",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_TB",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FEVER",
+      "conditionId": "CON_TB",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_APPETITE_LOSS",
+      "conditionId": "CON_TB",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_HIGH_FEVER",
+      "conditionId": "CON_DENGUE",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_BODY_ACHES",
+      "conditionId": "CON_DENGUE",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_HEADACHE",
+      "conditionId": "CON_DENGUE",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_RASH",
+      "conditionId": "CON_DENGUE",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_NAUSEA",
+      "conditionId": "CON_DENGUE",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_SEVERE_HEADACHE",
+      "conditionId": "CON_DENGUE",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_DENGUE",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_FEVER",
+      "conditionId": "CON_TYPHOID",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_ABDO_PAIN",
+      "conditionId": "CON_TYPHOID",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_HEADACHE",
+      "conditionId": "CON_TYPHOID",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_CONSTIPATION",
+      "conditionId": "CON_TYPHOID",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_TYPHOID",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_APPETITE_LOSS",
+      "conditionId": "CON_TYPHOID",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_HIGH_FEVER",
+      "conditionId": "CON_MALARIA",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_CHILLS",
+      "conditionId": "CON_MALARIA",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_SWEATING",
+      "conditionId": "CON_MALARIA",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_HEADACHE",
+      "conditionId": "CON_MALARIA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_BODY_ACHES",
+      "conditionId": "CON_MALARIA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_MALARIA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_NAUSEA",
+      "conditionId": "CON_MALARIA",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_CHEST_PAIN_RAD",
+      "conditionId": "CON_ACS",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_CHEST_PAIN",
+      "conditionId": "CON_ACS",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_SWEATING",
+      "conditionId": "CON_ACS",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_SOB",
+      "conditionId": "CON_ACS",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_NAUSEA",
+      "conditionId": "CON_ACS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_PALPITATIONS",
+      "conditionId": "CON_ACS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FAINTING",
+      "conditionId": "CON_ACS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_HEADACHE",
+      "conditionId": "CON_HTN",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_DIZZINESS",
+      "conditionId": "CON_HTN",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_BLURRED_VISION",
+      "conditionId": "CON_HTN",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_PALPITATIONS",
+      "conditionId": "CON_HTN",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_PALPITATIONS",
+      "conditionId": "CON_ARRHYTHMIA",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_DIZZINESS",
+      "conditionId": "CON_ARRHYTHMIA",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FAINTING",
+      "conditionId": "CON_ARRHYTHMIA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_CHEST_TIGHT",
+      "conditionId": "CON_ARRHYTHMIA",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_SOB",
+      "conditionId": "CON_ARRHYTHMIA",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_LEG_SWELLING",
+      "conditionId": "CON_HF",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_SOB",
+      "conditionId": "CON_HF",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_HF",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_CHEST_TIGHT",
+      "conditionId": "CON_HF",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_CALF_PAIN",
+      "conditionId": "CON_DVT",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_LEG_SWELLING",
+      "conditionId": "CON_DVT",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_DIARRHEA",
+      "conditionId": "CON_GASTRO",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_VOMITING",
+      "conditionId": "CON_GASTRO",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_NAUSEA",
+      "conditionId": "CON_GASTRO",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_ABDO_PAIN",
+      "conditionId": "CON_GASTRO",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FEVER",
+      "conditionId": "CON_GASTRO",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_DEHYDRATION",
+      "conditionId": "CON_GASTRO",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_HEARTBURN",
+      "conditionId": "CON_GERD",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_CHEST_TIGHT",
+      "conditionId": "CON_GERD",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_NAUSEA",
+      "conditionId": "CON_GERD",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_ABDO_PAIN",
+      "conditionId": "CON_GERD",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_ABDO_PAIN",
+      "conditionId": "CON_ULCER",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_HEARTBURN",
+      "conditionId": "CON_ULCER",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_NAUSEA",
+      "conditionId": "CON_ULCER",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_VOMIT_BLOOD",
+      "conditionId": "CON_ULCER",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_BLOOD_STOOL",
+      "conditionId": "CON_ULCER",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_RLQ_PAIN",
+      "conditionId": "CON_APPENDIX",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_ABDO_PAIN",
+      "conditionId": "CON_APPENDIX",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_NAUSEA",
+      "conditionId": "CON_APPENDIX",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_VOMITING",
+      "conditionId": "CON_APPENDIX",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FEVER",
+      "conditionId": "CON_APPENDIX",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_APPETITE_LOSS",
+      "conditionId": "CON_APPENDIX",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_RUQ_PAIN",
+      "conditionId": "CON_GALLSTONE",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_NAUSEA",
+      "conditionId": "CON_GALLSTONE",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_VOMITING",
+      "conditionId": "CON_GALLSTONE",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FEVER",
+      "conditionId": "CON_GALLSTONE",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_ABDO_PAIN",
+      "conditionId": "CON_GALLSTONE",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_ABDO_PAIN",
+      "conditionId": "CON_IBS",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_BLOATING",
+      "conditionId": "CON_IBS",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_DIARRHEA",
+      "conditionId": "CON_IBS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_CONSTIPATION",
+      "conditionId": "CON_IBS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_JAUNDICE",
+      "conditionId": "CON_HEPATITIS",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_HEPATITIS",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_NAUSEA",
+      "conditionId": "CON_HEPATITIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_RUQ_PAIN",
+      "conditionId": "CON_HEPATITIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_APPETITE_LOSS",
+      "conditionId": "CON_HEPATITIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_VOMIT_BLOOD",
+      "conditionId": "CON_GIBLEED",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_BLOOD_STOOL",
+      "conditionId": "CON_GIBLEED",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_DIZZINESS",
+      "conditionId": "CON_GIBLEED",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_GIBLEED",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_SEVERE_HEADACHE",
+      "conditionId": "CON_MIGRAINE",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_HEADACHE",
+      "conditionId": "CON_MIGRAINE",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_LIGHT_SENS",
+      "conditionId": "CON_MIGRAINE",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_NAUSEA",
+      "conditionId": "CON_MIGRAINE",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_VOMITING",
+      "conditionId": "CON_MIGRAINE",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_HEADACHE",
+      "conditionId": "CON_TENSION_HA",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_TENSION_HA",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_NECK_STIFF",
+      "conditionId": "CON_MENINGITIS",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_FEVER",
+      "conditionId": "CON_MENINGITIS",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_SEVERE_HEADACHE",
+      "conditionId": "CON_MENINGITIS",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_LIGHT_SENS",
+      "conditionId": "CON_MENINGITIS",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_CONFUSION",
+      "conditionId": "CON_MENINGITIS",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_RASH",
+      "conditionId": "CON_MENINGITIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FACE_DROOP",
+      "conditionId": "CON_STROKE",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_SLURRED_SPEECH",
+      "conditionId": "CON_STROKE",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_NUMBNESS",
+      "conditionId": "CON_STROKE",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_SEVERE_HEADACHE",
+      "conditionId": "CON_STROKE",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_CONFUSION",
+      "conditionId": "CON_STROKE",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_DIZZINESS",
+      "conditionId": "CON_STROKE",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_VERTIGO",
+      "conditionId": "CON_VERTIGO",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_DIZZINESS",
+      "conditionId": "CON_VERTIGO",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_NAUSEA",
+      "conditionId": "CON_VERTIGO",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_SEIZURE",
+      "conditionId": "CON_SEIZURE",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_CONFUSION",
+      "conditionId": "CON_SEIZURE",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_FAINTING",
+      "conditionId": "CON_SEIZURE",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_BURNING_URINE",
+      "conditionId": "CON_UTI",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_FREQ_URINE",
+      "conditionId": "CON_UTI",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_PELVIC_PAIN",
+      "conditionId": "CON_UTI",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_BLOOD_URINE",
+      "conditionId": "CON_UTI",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_ABDO_PAIN",
+      "conditionId": "CON_UTI",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_FLANK_PAIN",
+      "conditionId": "CON_KIDNEY_STONE",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_BLOOD_URINE",
+      "conditionId": "CON_KIDNEY_STONE",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_NAUSEA",
+      "conditionId": "CON_KIDNEY_STONE",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_VOMITING",
+      "conditionId": "CON_KIDNEY_STONE",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_ABDO_PAIN",
+      "conditionId": "CON_KIDNEY_STONE",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FREQ_URINE",
+      "conditionId": "CON_KIDNEY_STONE",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_FLANK_PAIN",
+      "conditionId": "CON_PYELO",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_FEVER",
+      "conditionId": "CON_PYELO",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_BURNING_URINE",
+      "conditionId": "CON_PYELO",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_NAUSEA",
+      "conditionId": "CON_PYELO",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_CHILLS",
+      "conditionId": "CON_PYELO",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_URINE_DIFF",
+      "conditionId": "CON_BPH",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_FREQ_URINE",
+      "conditionId": "CON_BPH",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_THIRST",
+      "conditionId": "CON_HYPERGLYCEMIA",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_FREQ_URINE",
+      "conditionId": "CON_HYPERGLYCEMIA",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_HYPERGLYCEMIA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_WEIGHT_LOSS",
+      "conditionId": "CON_HYPERGLYCEMIA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_BLURRED_VISION",
+      "conditionId": "CON_HYPERGLYCEMIA",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_THIRST",
+      "conditionId": "CON_DKA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_FREQ_URINE",
+      "conditionId": "CON_DKA",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_VOMITING",
+      "conditionId": "CON_DKA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_ABDO_PAIN",
+      "conditionId": "CON_DKA",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_CONFUSION",
+      "conditionId": "CON_DKA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_SOB",
+      "conditionId": "CON_DKA",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_SWEATING",
+      "conditionId": "CON_HYPOGLYCEMIA",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_CONFUSION",
+      "conditionId": "CON_HYPOGLYCEMIA",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_DIZZINESS",
+      "conditionId": "CON_HYPOGLYCEMIA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_PALPITATIONS",
+      "conditionId": "CON_HYPOGLYCEMIA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_FAINTING",
+      "conditionId": "CON_HYPOGLYCEMIA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_THYROID",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_WEIGHT_LOSS",
+      "conditionId": "CON_THYROID",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_PALPITATIONS",
+      "conditionId": "CON_THYROID",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_RASH",
+      "conditionId": "CON_DERMATITIS",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_ITCHING",
+      "conditionId": "CON_DERMATITIS",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_SKIN_RED_WARM",
+      "conditionId": "CON_DERMATITIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_HIVES",
+      "conditionId": "CON_URTICARIA",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_ITCHING",
+      "conditionId": "CON_URTICARIA",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_RASH",
+      "conditionId": "CON_URTICARIA",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_SKIN_RED_WARM",
+      "conditionId": "CON_CELLULITIS",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_FEVER",
+      "conditionId": "CON_CELLULITIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_SKIN_SWELL",
+      "conditionId": "CON_CELLULITIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_RASH",
+      "conditionId": "CON_ECZEMA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_ITCHING",
+      "conditionId": "CON_ECZEMA",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_SKIN_SWELL",
+      "conditionId": "CON_ANAPHYLAXIS",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_HIVES",
+      "conditionId": "CON_ANAPHYLAXIS",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_SOB",
+      "conditionId": "CON_ANAPHYLAXIS",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_WHEEZING",
+      "conditionId": "CON_ANAPHYLAXIS",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_DIZZINESS",
+      "conditionId": "CON_ANAPHYLAXIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FAINTING",
+      "conditionId": "CON_ANAPHYLAXIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_JOINT_PAIN",
+      "conditionId": "CON_OA",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_MORNING_STIFF",
+      "conditionId": "CON_OA",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_JOINT_SWELL",
+      "conditionId": "CON_OA",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_BACK_PAIN",
+      "conditionId": "CON_OA",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_JOINT_PAIN",
+      "conditionId": "CON_RA",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_JOINT_SWELL",
+      "conditionId": "CON_RA",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_MORNING_STIFF",
+      "conditionId": "CON_RA",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_RA",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_BACK_PAIN",
+      "conditionId": "CON_BACKPAIN",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_NUMBNESS",
+      "conditionId": "CON_BACKPAIN",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_JOINT_PAIN",
+      "conditionId": "CON_GOUT",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_JOINT_SWELL",
+      "conditionId": "CON_GOUT",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_SKIN_RED_WARM",
+      "conditionId": "CON_GOUT",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_RED_EYE",
+      "conditionId": "CON_CONJUNCTIVITIS",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_EYE_DISCHARGE",
+      "conditionId": "CON_CONJUNCTIVITIS",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_ITCHING",
+      "conditionId": "CON_CONJUNCTIVITIS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_VISION_LOSS",
+      "conditionId": "CON_VISION_LOSS",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_BLURRED_VISION",
+      "conditionId": "CON_VISION_LOSS",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_MISSED_PERIOD",
+      "conditionId": "CON_PREGNANCY",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_NAUSEA_MORNING",
+      "conditionId": "CON_PREGNANCY",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_BREAST_TENDER",
+      "conditionId": "CON_PREGNANCY",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_PREGNANCY",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FREQ_URINE",
+      "conditionId": "CON_PREGNANCY",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_PELVIC_PAIN",
+      "conditionId": "CON_ECTOPIC",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_ABDO_PAIN",
+      "conditionId": "CON_ECTOPIC",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_VAGINAL_BLEED",
+      "conditionId": "CON_ECTOPIC",
+      "weight": 4
+    },
+    {
+      "symptomId": "SYM_MISSED_PERIOD",
+      "conditionId": "CON_ECTOPIC",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_DIZZINESS",
+      "conditionId": "CON_ECTOPIC",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_FAINTING",
+      "conditionId": "CON_ECTOPIC",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_MENSTRUAL_PAIN",
+      "conditionId": "CON_DYSMENORRHEA",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_PELVIC_PAIN",
+      "conditionId": "CON_DYSMENORRHEA",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_ABDO_PAIN",
+      "conditionId": "CON_DYSMENORRHEA",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_VAGINAL_BLEED",
+      "conditionId": "CON_AUB",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_AUB",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_PELVIC_PAIN",
+      "conditionId": "CON_AUB",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_ANXIETY",
+      "conditionId": "CON_ANXIETY",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_PALPITATIONS",
+      "conditionId": "CON_ANXIETY",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_SLEEP_PROB",
+      "conditionId": "CON_ANXIETY",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_CHEST_TIGHT",
+      "conditionId": "CON_ANXIETY",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_DIZZINESS",
+      "conditionId": "CON_ANXIETY",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_LOW_MOOD",
+      "conditionId": "CON_DEPRESSION",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_SLEEP_PROB",
+      "conditionId": "CON_DEPRESSION",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_FATIGUE",
+      "conditionId": "CON_DEPRESSION",
+      "weight": 3
+    },
+    {
+      "symptomId": "SYM_APPETITE_LOSS",
+      "conditionId": "CON_DEPRESSION",
+      "weight": 2
+    },
+    {
+      "symptomId": "SYM_WEIGHT_LOSS",
+      "conditionId": "CON_DEPRESSION",
+      "weight": 1
+    },
+    {
+      "symptomId": "SYM_SUICIDAL",
+      "conditionId": "CON_CRISIS",
+      "weight": 5
+    },
+    {
+      "symptomId": "SYM_LOW_MOOD",
+      "conditionId": "CON_CRISIS",
+      "weight": 3
+    }
+  ]
+}

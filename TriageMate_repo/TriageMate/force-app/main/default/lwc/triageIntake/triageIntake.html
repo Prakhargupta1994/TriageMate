@@ -1,0 +1,165 @@
+<template>
+    <lightning-card title="Patient Intake & Triage (build v3)" icon-name="standard:case">
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+            <!-- ============ INTAKE FORM ============ -->
+            <template if:false={hasResult}>
+
+                <!-- patient -->
+                <div class="slds-grid slds-gutters slds-wrap slds-m-bottom_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-input label="First name" value={firstName} onchange={handleFirst}></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-input label="Last name" value={lastName} onchange={handleLast}></lightning-input>
+                    </div>
+                </div>
+
+                <!-- symptoms -->
+                <div class="slds-text-title_caps slds-m-vertical_x-small">Symptoms</div>
+                <p class="slds-text-body_small slds-text-color_weak slds-m-bottom_x-small">
+                    Select everything that applies. ({selectedCount} selected)
+                </p>
+                <template for:each={groups} for:item="g">
+                    <div key={g.system} class="slds-box slds-box_x-small slds-m-bottom_x-small">
+                        <div class="slds-text-title slds-m-bottom_xx-small">{g.system}</div>
+                        <div class="slds-grid slds-wrap slds-gutters_xx-small">
+                            <template for:each={g.items} for:item="it">
+                                <div key={it.id} class="slds-col slds-size_1-of-2 slds-p-vertical_xxx-small">
+                                    <lightning-input
+                                        type="checkbox"
+                                        label={it.label}
+                                        data-id={it.id}
+                                        checked={it.checked}
+                                        onchange={handleSymptomToggle}>
+                                    </lightning-input>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+
+                <!-- duration + severity -->
+                <div class="slds-grid slds-gutters slds-wrap slds-m-vertical_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-input type="number" min="0" label="How many days?"
+                            value={durationDays} onchange={handleDuration}></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-combobox label="Overall severity" value={severity}
+                            options={severityOptions} onchange={handleSeverity}></lightning-combobox>
+                    </div>
+                </div>
+
+                <!-- medications -->
+                <div class="slds-text-title_caps slds-m-vertical_x-small">Current medications</div>
+                <template for:each={meds} for:item="m">
+                    <div key={m.key} class="slds-grid slds-gutters slds-wrap slds-m-bottom_xx-small">
+                        <div class="slds-col slds-size_5-of-12">
+                            <lightning-input placeholder="Drug name" value={m.drugName}
+                                data-key={m.key} data-field="drugName" onchange={handleMedChange}></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <lightning-input placeholder="Dosage" value={m.dosage}
+                                data-key={m.key} data-field="dosage" onchange={handleMedChange}></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <lightning-input placeholder="Frequency" value={m.frequency}
+                                data-key={m.key} data-field="frequency" onchange={handleMedChange}></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-align-bottom">
+                            <lightning-button-icon icon-name="utility:delete" data-key={m.key}
+                                onclick={removeMed} alternative-text="Remove"></lightning-button-icon>
+                        </div>
+                    </div>
+                </template>
+                <lightning-button label="Add medication" icon-name="utility:add"
+                    onclick={addMed} class="slds-m-bottom_small"></lightning-button>
+
+                <!-- prior observations -->
+                <div class="slds-text-title_caps slds-m-vertical_x-small">Past diagnoses / notes from elsewhere</div>
+                <template for:each={observations} for:item="o">
+                    <div key={o.key} class="slds-grid slds-gutters slds-m-bottom_xx-small">
+                        <div class="slds-col slds-size_11-of-12">
+                            <lightning-input placeholder="e.g. Type 2 diabetes, diagnosed at City Hospital 2023"
+                                value={o.text} data-key={o.key} onchange={handleObsChange}></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-align-bottom">
+                            <lightning-button-icon icon-name="utility:delete" data-key={o.key}
+                                onclick={removeObs} alternative-text="Remove"></lightning-button-icon>
+                        </div>
+                    </div>
+                </template>
+                <lightning-button label="Add past note" icon-name="utility:add"
+                    onclick={addObs} class="slds-m-bottom_medium"></lightning-button>
+
+                <!-- submit -->
+                <div class="slds-m-top_medium">
+                    <lightning-button variant="brand" label="Submit & get probable issues"
+                        onclick={handleSubmit} disabled={submitDisabled}></lightning-button>
+                    <template if:true={showHint}>
+                        <p class="slds-text-body_small slds-text-color_weak slds-m-top_x-small">
+                            Select at least one symptom to continue.
+                        </p>
+                    </template>
+                </div>
+
+                <template if:true={loading}>
+                    <div class="slds-m-top_medium slds-align_absolute-center">
+                        <lightning-spinner alternative-text="Analyzing..." size="small"></lightning-spinner>
+                        <span class="slds-m-left_small slds-text-color_weak">Analyzing symptoms...</span>
+                    </div>
+                </template>
+
+                <template if:true={hintMsg}>
+                    <p class="slds-text-body_small slds-text-color_weak slds-m-top_x-small">{hintMsg}</p>
+                </template>
+            </template>
+
+            <!-- ============ RESULT PANEL (clinician-facing) ============ -->
+            <template if:true={hasResult}>
+                <div class="success-banner slds-m-bottom_small">
+                    &#10003; Intake saved. A Case has been created and routed.
+                </div>
+
+                <template if:true={result.isRedFlag}>
+                    <div class="redflag-banner slds-m-bottom_small">
+                        &#9888; Red-flag pattern detected — recommend immediate escalation to Emergency Medicine.
+                    </div>
+                </template>
+
+                <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center slds-m-bottom_small">
+                    <span class={priorityClass}>{result.triageLevel}</span>
+                    <span class="slds-text-body_regular">
+                        Route to: <strong>{result.recommendedSpecialty}</strong>
+                    </span>
+                </div>
+
+                <div class="slds-text-title_caps slds-m-bottom_xx-small">Probable issues (for clinician review)</div>
+                <ul class="slds-has-dividers_bottom-space slds-m-bottom_small">
+                    <template for:each={rankedForDisplay} for:item="c">
+                        <li key={c.externalId} class="slds-item slds-grid slds-grid_align-spread">
+                            <span>{c.rank}. {c.name}</span>
+                            <span class="slds-text-color_weak">{c.badge} &middot; score {c.score}</span>
+                        </li>
+                    </template>
+                </ul>
+
+                <div class="slds-text-title_caps slds-m-bottom_xx-small">{aiSourceLabel}</div>
+                <div class="ai-summary slds-box slds-box_x-small slds-m-bottom_small">
+                    <lightning-formatted-text value={result.aiSummary}></lightning-formatted-text>
+                </div>
+
+                <p class="slds-text-body_small slds-text-color_weak slds-m-bottom_small">
+                    Decision support only — not a diagnosis. A licensed clinician must confirm.
+                </p>
+
+                <lightning-button label="New intake" onclick={handleReset}></lightning-button>
+            </template>
+
+            <template if:true={errorMsg}>
+                <div class="slds-text-color_error slds-m-top_small">{errorMsg}</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,33 @@
+.priority-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.03em;
+}
+.is-critical { background: #ba0517; }
+.is-urgent   { background: #dd7a01; }
+.is-routine  { background: #2e844a; }
+
+.redflag-banner {
+    background: #fbe9e9;
+    border-left: 4px solid #ba0517;
+    color: #8e030f;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+}
+.success-banner {
+    background: #edf7ef;
+    border-left: 4px solid #2e844a;
+    color: #1a5c30;
+    padding: 0.6rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+}
+.ai-summary {
+    background: #f3f3f3;
+    white-space: pre-wrap;
+    line-height: 1.4;
+}
